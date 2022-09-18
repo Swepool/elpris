@@ -1,0 +1,46 @@
+:root {
+  --website-max-width: 1200px;
+  --backgound-color: #2c2d31;
+  --title-color: #fcfcfc;
+  --text-color: #fcfcfc;
+
+  --card-border: 1px solid #595a62;
+  --card-background: #4b4c53;
+  --card-border-radius: 10px;
+
+  --row-divider-color: #363438;
+
+  --input-background-colot: #2e3035;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  height: 100%;
+  background: radial-gradient(#303442, #222427) no-repeat fixed center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--title-color);
+  margin: 0;
+}
+
+p {
+  color: var(--text-color);
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1000px;
+}

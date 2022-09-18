@@ -5,6 +5,6 @@
     <slot/>
 </main>
 
-<style>
-
+<style global>
+    @import '../theme/global.scss';
 </style>
