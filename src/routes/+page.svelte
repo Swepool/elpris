@@ -10,6 +10,12 @@
         getShower,
         getWasherDryer
     } from "../utils/index.js";
+    import Car from "$lib/icons/Car.svelte";
+    import Bitcoin from "$lib/icons/Bitcoin.svelte";
+    import Snowflake from "$lib/icons/Snowflake.svelte";
+    import Drop from "$lib/icons/Drop.svelte";
+    import Washer from "$lib/icons/Washer.svelte";
+    import Dish from "$lib/icons/Dish.svelte";
 
     export let data
 
@@ -25,9 +31,9 @@
             <div>
                 <div class="card-title">
                     <Lightning color="#FFD129"/>
-                    <h3>Current price:</h3>
+                    <h3>Current price</h3>
                 </div>
-                <h3>( kWh )</h3>
+                <h4>( kWh )</h4>
             </div>
             <h2>{currentPrice} €</h2>
         </div>
@@ -35,9 +41,9 @@
             <div>
                 <div class="card-title">
                     <Lightning color="#FF4B78"/>
-                    <h3>Highest price:</h3>
+                    <h3>Highest price</h3>
                 </div>
-                <h3>( kWh )</h3>
+                <h4>( kWh )</h4>
             </div>
             <h2>{highestPrice} €</h2>
         </div>
@@ -45,9 +51,9 @@
             <div>
                 <div class="card-title">
                     <Lightning color="#2DFF73"/>
-                    <h3>Lowest price:</h3>
+                    <h3>Lowest price</h3>
                 </div>
-                <h3>( kWh )</h3>
+                <h4>( kWh )</h4>
             </div>
             <h2>{lowestPrice} €</h2>
         </div>
@@ -66,34 +72,62 @@
     <div class="grid">
         <div class="card">
             <div>
-                <h3>Air Condition:</h3>
-                <h3>( 1H )</h3>
+                <div class="card-title">
+                    <Snowflake/>
+                    <h3>Air Condition</h3>
+                </div>
+                <h4>( 1H )</h4>
             </div>
             <h2>{getAc(currentPrice).low} - {getAc(currentPrice).high} €</h2>
         </div>
         <div class="card">
             <div>
-                <h3>Shower:</h3>
-                <h3>( 10M )</h3>
+                <div class="card-title">
+                    <Drop/>
+                    <h3>Shower</h3>
+                </div>
+
+                <h4>( 10M )</h4>
             </div>
             <h2>{getShower(currentPrice).low} - {getShower(currentPrice).high} €</h2>
         </div>
         <div class="card">
-            <h3>Dishwasher:</h3>
+            <div>
+                <div class="card-title">
+                    <Dish/>
+                    <h3>Dishwasher</h3>
+                </div>
+                <h4>( One run )</h4>
+            </div>
             <h2>{getDishwasher(currentPrice).low} - {getDishwasher(currentPrice).high} €</h2>
         </div>
         <div class="card">
-            <h3>Washer & dryer</h3>
+            <div>
+                <div class="card-title">
+                    <Washer/>
+                    <h3>Washer & dryer</h3>
+                </div>
+                <h4>( One run )</h4>
+            </div>
             <h2>{getWasherDryer(currentPrice).low} - {getWasherDryer(currentPrice).high} €</h2>
         </div>
         <div class="card">
-            <h3>Charge car</h3>
+            <div>
+                <div class="card-title">
+                    <Car/>
+                    <h3>Charge car</h3>
+                </div>
+                <h4>( 0 - 100% )</h4>
+            </div>
             <h2>{getCarCharge(currentPrice).low} - {getCarCharge(currentPrice).high} €</h2>
         </div>
         <div class="card">
             <div>
-                <h3>Bitcoin miner</h3>
-                <h3>( S19 1H )</h3>
+                <div class="card-title">
+                    <Bitcoin/>
+                    <h3>Bitcoin miner</h3>
+                </div>
+                <h4>( S19 1H )</h4>
             </div>
             <h2>{getMiner(currentPrice).low} - {getMiner(currentPrice).high} €</h2>
         </div>
@@ -139,7 +173,7 @@
       gap: 0.5rem;
     }
 
-    h3 {
+    h3, h4 {
       font-weight: 200;
     }
 
