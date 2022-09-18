@@ -38,3 +38,21 @@ export const getAc = (kwhPrice) => {
         high: (HIGH_USAGE * kwhPrice).toFixed(2)
     }
 }
+
+export const getCarCharge = (kwhPrice) => {
+    const LOW_USAGE = 40
+    const HIGH_USAGE = 100
+    return {
+        low: (LOW_USAGE * kwhPrice).toFixed(2),
+        high: (HIGH_USAGE * kwhPrice).toFixed(2)
+    }
+}
+
+export const getMiner = (kwhPrice) => {
+    const LOW_USAGE = 3.25
+    const HIGH_USAGE = 5.5
+    return {
+        low: (LOW_USAGE * kwhPrice).toFixed(2),
+        high: (HIGH_USAGE * kwhPrice).toFixed(2)
+    }
+}

@@ -1,6 +1,15 @@
 <script>
+    import Lightning from "$lib/icons/Lightning.svelte";
+
     export const ssr = true
-    import {getAc, getDishwasher, getShower, getWasherDryer} from "../utils/index.js";
+    import {
+        getAc,
+        getCarCharge,
+        getDishwasher,
+        getMiner,
+        getShower,
+        getWasherDryer
+    } from "../utils/index.js";
 
     export let data
 
@@ -14,50 +23,60 @@
     <div class="grid">
         <div class="card">
             <div>
-                <h3>Current price:</h3>
+                <div class="card-title">
+                    <Lightning color="#FFD129"/>
+                    <h3>Current price:</h3>
+                </div>
                 <h3>( kWh )</h3>
             </div>
             <h2>{currentPrice} €</h2>
         </div>
         <div class="card">
             <div>
-                <h3>Highest price:</h3>
+                <div class="card-title">
+                    <Lightning color="#FF4B78"/>
+                    <h3>Highest price:</h3>
+                </div>
                 <h3>( kWh )</h3>
             </div>
             <h2>{highestPrice} €</h2>
         </div>
         <div class="card">
             <div>
-                <h3>Lowest price:</h3>
+                <div class="card-title">
+                    <Lightning color="#2DFF73"/>
+                    <h3>Lowest price:</h3>
+                </div>
                 <h3>( kWh )</h3>
             </div>
             <h2>{lowestPrice} €</h2>
         </div>
         <div class="card">
             <div>
-                <h3>Lowest price:</h3>
-                <h3>( kWh )</h3>
+                <h3>Overview:</h3>
             </div>
-            <h2>{lowestPrice} €</h2>
+            <div>
+                <div></div>
+            </div>
         </div>
     </div>
 </div>
 <div class="container">
-    <h2 class="title">Usage</h2>
+    <h2 class="title">Cost examples</h2>
     <div class="grid">
         <div class="card">
             <div>
                 <h3>Air Condition:</h3>
-                <h3>( 1 hour )</h3>
+                <h3>( 1H )</h3>
             </div>
             <h2>{getAc(currentPrice).low} - {getAc(currentPrice).high} €</h2>
         </div>
         <div class="card">
             <div>
                 <h3>Shower:</h3>
-                <h3>( 10 min )</h3>
+                <h3>( 10M )</h3>
             </div>
-            <h2>{getShower(currentPrice).low} - {getShower(currentPrice).high}€</h2>
+            <h2>{getShower(currentPrice).low} - {getShower(currentPrice).high} €</h2>
         </div>
         <div class="card">
             <h3>Dishwasher:</h3>
@@ -66,6 +85,17 @@
         <div class="card">
             <h3>Washer & dryer</h3>
             <h2>{getWasherDryer(currentPrice).low} - {getWasherDryer(currentPrice).high} €</h2>
+        </div>
+        <div class="card">
+            <h3>Charge car</h3>
+            <h2>{getCarCharge(currentPrice).low} - {getCarCharge(currentPrice).high} €</h2>
+        </div>
+        <div class="card">
+            <div>
+                <h3>Bitcoin miner</h3>
+                <h3>( S19 1H )</h3>
+            </div>
+            <h2>{getMiner(currentPrice).low} - {getMiner(currentPrice).high} €</h2>
         </div>
     </div>
 </div>
@@ -101,6 +131,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+
+    .card-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     h3 {
