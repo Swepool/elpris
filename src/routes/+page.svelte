@@ -1,6 +1,6 @@
 <script>
     export const ssr = true
-    import {chill, dishwasher, shower} from "../utils/index.js";
+    import {getAc, getDishwasher, getShower, getWasherDryer} from "../utils/index.js";
 
     export let data
 
@@ -50,22 +50,22 @@
                 <h3>Air Condition:</h3>
                 <h3>( 1 hour )</h3>
             </div>
-            <h2>{chill(currentPrice)} €</h2>
+            <h2>{getAc(currentPrice).low} - {getAc(currentPrice).high} €</h2>
         </div>
         <div class="card">
             <div>
                 <h3>Shower:</h3>
                 <h3>( 10 min )</h3>
             </div>
-            <h2>{shower(currentPrice, 10)} €</h2>
+            <h2>{getShower(currentPrice).low} {getShower(currentPrice).high}€</h2>
         </div>
         <div class="card">
             <h3>Dishwasher:</h3>
-            <h2>{dishwasher(currentPrice)} €</h2>
+            <h2>{getDishwasher(currentPrice).low}- {getDishwasher(currentPrice).high} €</h2>
         </div>
         <div class="card">
-            <h3>Dishwasher:</h3>
-            <h2>{dishwasher(currentPrice)} €</h2>
+            <h3>Wash & dry</h3>
+            <h2>{getWasherDryer(currentPrice).low}- {getWasherDryer(currentPrice).high} €</h2>
         </div>
     </div>
 </div>
