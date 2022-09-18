@@ -57,15 +57,15 @@
                 <h3>Shower:</h3>
                 <h3>( 10 min )</h3>
             </div>
-            <h2>{getShower(currentPrice).low} {getShower(currentPrice).high}€</h2>
+            <h2>{getShower(currentPrice).low} - {getShower(currentPrice).high}€</h2>
         </div>
         <div class="card">
             <h3>Dishwasher:</h3>
-            <h2>{getDishwasher(currentPrice).low}- {getDishwasher(currentPrice).high} €</h2>
+            <h2>{getDishwasher(currentPrice).low} - {getDishwasher(currentPrice).high} €</h2>
         </div>
         <div class="card">
             <h3>Washer & dryer</h3>
-            <h2>{getWasherDryer(currentPrice).low}- {getWasherDryer(currentPrice).high} €</h2>
+            <h2>{getWasherDryer(currentPrice).low} - {getWasherDryer(currentPrice).high} €</h2>
         </div>
     </div>
 </div>

@@ -11,7 +11,7 @@ export const getShower = (kwhPrice) => {
 
 export const getDishwasher = (kwhPrice) => {
     //Usage: 0.7-1.5 kWh
-    const LOW_USAGE = 1
+    const LOW_USAGE = 1.5
     const HIGH_USAGE = 2
     return {
         low: (LOW_USAGE * kwhPrice).toFixed(2),
