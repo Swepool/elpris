@@ -1,14 +1,11 @@
 <script>
     import Lightning from "$lib/icons/Lightning.svelte";
-
-    export const ssr = true
     import {
         getAc,
         getCarCharge,
-        getDishwasher,
+        getDishwasher, getDryer,
         getMiner,
         getShower,
-        getWasherDryer
     } from "../utils/index.js";
     import Car from "$lib/icons/Car.svelte";
     import Bitcoin from "$lib/icons/Bitcoin.svelte";
@@ -17,6 +14,7 @@
     import Washer from "$lib/icons/Washer.svelte";
     import Dish from "$lib/icons/Dish.svelte";
 
+    export const ssr = true
     export let data
 
     let currentPrice = data.currentPrice
@@ -105,11 +103,11 @@
             <div>
                 <div class="card-title">
                     <Washer/>
-                    <h3>Washer & dryer</h3>
+                    <h3>Dryer</h3>
                 </div>
                 <h4>( One run )</h4>
             </div>
-            <h2>{getWasherDryer(currentPrice).low} - {getWasherDryer(currentPrice).high} €</h2>
+            <h2>{getDryer(currentPrice).low} - {getDryer(currentPrice).high} €</h2>
         </div>
         <div class="card">
             <div>

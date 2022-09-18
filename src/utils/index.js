@@ -19,10 +19,10 @@ export const getDishwasher = (kwhPrice) => {
     }
 }
 
-export const getWasherDryer = (kwhPrice) => {
-    //Usage: 2-4 kWh
-    const LOW_USAGE = 2
-    const HIGH_USAGE = 4
+export const getDryer = (kwhPrice) => {
+    //Usage: 3-5 kWh
+    const LOW_USAGE = 3
+    const HIGH_USAGE = 5
     return {
         low: (LOW_USAGE * kwhPrice).toFixed(2),
         high: (HIGH_USAGE * kwhPrice).toFixed(2)
