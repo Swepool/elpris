@@ -33,7 +33,7 @@
                     <Lightning color="#FFD129"/>
                     <h3>Current price</h3>
                 </div>
-                <h4>( kWh )</h4>
+                <h4>( 1 kWh )</h4>
             </div>
             <h2>{currentPrice} €</h2>
         </div>
@@ -43,7 +43,7 @@
                     <Lightning color="#FF4B78"/>
                     <h3>Highest price</h3>
                 </div>
-                <h4>( kWh )</h4>
+                <h4>( 1 kWh )</h4>
             </div>
             <h2>{highestPrice} €</h2>
         </div>
@@ -53,7 +53,7 @@
                     <Lightning color="#2DFF73"/>
                     <h3>Lowest price</h3>
                 </div>
-                <h4>( kWh )</h4>
+                <h4>( 1 kWh )</h4>
             </div>
             <h2>{lowestPrice} €</h2>
         </div>
