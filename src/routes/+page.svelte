@@ -64,6 +64,9 @@
             </div>
         </div>
     </div>
+    <div class="ad">
+        <h2>Your ad here</h2>
+    </div>
 </div>
 <div class="container">
     <h2 class="title">Cost examples</h2>
@@ -130,6 +133,9 @@
             <h2>{getMiner(currentPrice).low} - {getMiner(currentPrice).high} €</h2>
         </div>
     </div>
+    <div class="ad">
+        <h2>Your ad here</h2>
+    </div>
 </div>
 
 
@@ -183,6 +189,21 @@
   @media screen and (max-width: 568px) {
     .card {
       grid-column: span 12 / span 12;
+    }
+  }
+
+  .ad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 100px;
+    opacity: 50%;
+    padding: 1rem;
+
+    h2 {
+      font-weight: 400;
     }
   }
 </style>
